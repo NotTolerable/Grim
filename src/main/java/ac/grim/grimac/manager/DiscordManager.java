@@ -80,10 +80,10 @@ public class DiscordManager implements Initable {
                     .setImageUrl("https://i.stack.imgur.com/Fzh0w.png") // Constant width
                     .setThumbnailUrl("https://crafthead.net/helm/" + player.user.getProfile().getUUID())
                     .setColor(embedColor)
-                    .setTitle(new WebhookEmbed.EmbedTitle("**Grim Alert**", null))
+                    .setTitle(new WebhookEmbed.EmbedTitle("**Volaria Alert**", null))
                     .setDescription(content)
                     .setTimestamp(Instant.now())
-                    .setFooter(new WebhookEmbed.EmbedFooter("", "https://grim.ac/images/grim.png"));
+                    .setFooter(new WebhookEmbed.EmbedFooter("", ""));
 
             if (!verbose.isEmpty()) {
                 embed.addField(new WebhookEmbed.EmbedField(true, "Verbose", verbose));
