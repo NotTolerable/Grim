@@ -41,7 +41,7 @@ public class DiscordManager implements Initable {
             client.setTimeout(15000); // Requests expire after 15 seconds
 
             try {
-                embedColor = Color.decode(GrimAPI.INSTANCE.getConfigManager().getConfig().getStringElse("embed-color", "#00FFFF")).getRGB();
+                embedColor = Color.decode(GrimAPI.INSTANCE.getConfigManager().getConfig().getStringElse("embed-color", "#60FB01")).getRGB();
             } catch (NumberFormatException e) {
                 LogUtil.warn("Discord embed color is invalid");
             }
@@ -80,7 +80,7 @@ public class DiscordManager implements Initable {
                     .setImageUrl("https://i.stack.imgur.com/Fzh0w.png") // Constant width
                     .setThumbnailUrl("https://crafthead.net/helm/" + player.user.getProfile().getUUID())
                     .setColor(embedColor)
-                    .setTitle(new WebhookEmbed.EmbedTitle("**Volaria AntiCheat**", null))
+                    .setTitle(new WebhookEmbed.EmbedTitle("**GankPvP AntiCheat**", null))
                     .setDescription(content)
                     .setTimestamp(Instant.now())
                     .setFooter(new WebhookEmbed.EmbedFooter("", ""));
